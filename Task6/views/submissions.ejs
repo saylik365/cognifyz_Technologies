@@ -1,0 +1,60 @@
+<!-- ✅ Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    .card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        animation: fadeIn 0.8s ease-in-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .form-control:focus {
+        border-color: #43cea2;
+        box-shadow: 0 0 8px rgba(67, 206, 162, 0.5);
+    }
+    .btn-success {
+        background: #43cea2;
+        border: none;
+        transition: 0.3s;
+    }
+    .btn-success:hover {
+        background: #36a68b;
+    }
+    #submission-list li {
+        border-radius: 10px;
+        margin-bottom: 10px;
+        animation: slideIn 0.5s ease-in-out;
+    }
+    @keyframes slideIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+</style>
+
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="card" style="max-width: 600px; width: 100%;">
+        <h1 class="mb-4 text-center text-success fw-bold">Your Submissions</h1>
+        
+        <!-- ✅ Contact Form -->
+        <form id="contact-form" class="mb-4">
+            <input type="text" name="name" class="form-control mb-3" placeholder="Enter Name" required>
+            <input type="email" name="email" class="form-control mb-3" placeholder="Enter Email" required>
+            <textarea name="message" class="form-control mb-3" placeholder="Enter Message" rows="4" required></textarea>
+            <button type="submit" class="btn btn-success w-100 fw-bold py-2">Submit</button>
+        </form>
+        
+        <ul class="list-group" id="submission-list">
+        </ul>
+    </div>
+</div>
+
+<script src="/fetchSubmissions.js"></script>
