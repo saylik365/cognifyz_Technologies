@@ -1,0 +1,14 @@
+{
+  "name": "task5-api-crud",
+  "version": "1.0.0",
+  "description": "Task 5: API Integration & Front-End Interaction (Cognifyz Internship)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
