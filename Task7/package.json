@@ -1,0 +1,19 @@
+{
+  "name": "task7-weather-api",
+  "version": "1.0.0",
+  "description": "Task 7: External API Integration (Cognifyz Internship)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.6.1",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.8.7",
+    "node-fetch": "^3.3.2"
+  }
+}

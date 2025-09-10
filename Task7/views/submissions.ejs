@@ -1,0 +1,94 @@
+<!-- <div class="container mt-5">
+    <div class="card p-4 shadow-lg animate">
+        <h1 class="mb-4">Your Submissions</h1>
+        <form id="contact-form" class="mb-4">
+            <input type="text" name="name" class="form-control mb-2" placeholder="Enter Name">
+            <input type="email" name="email" class="form-control mb-2" placeholder="Enter Email">
+            <textarea name="message" class="form-control mb-2" placeholder="Enter Message"></textarea>
+            <button type="submit" class="btn btn-success w-100">Submit</button>
+        </form>
+        <ul class="list-group" id="submission-list"></ul>
+        <a href="/weather" class="btn btn-info w-100 mt-3">Check Weather</a>
+    </div>
+</div>
+<script src="/fetchSubmissions.js"></script> -->
+
+<!-- ✅ Bootstrap CSS & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+  body {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .form-control:focus {
+    border-color: #38ef7d;
+    box-shadow: 0 0 8px rgba(56, 239, 125, 0.5);
+  }
+  .btn-success {
+    background: #38ef7d;
+    border: none;
+    transition: 0.3s;
+  }
+  .btn-success:hover {
+    background: #2ecc71;
+  }
+  .btn-info {
+    background: #11998e;
+    border: none;
+    transition: 0.3s;
+  }
+  .btn-info:hover {
+    background: #0d7a72;
+  }
+  #submission-list li {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+</style>
+
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="card" style="max-width: 650px; width: 100%;">
+    <h1 class="mb-4 text-center text-success fw-bold">Your Submissions</h1>
+    
+    <form id="contact-form" class="mb-4">
+      <div class="mb-3">
+        <label class="form-label fw-semibold" for="name"><i class="bi bi-person me-2"></i>Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter Name" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-semibold" for="email"><i class="bi bi-envelope me-2"></i>Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-semibold" for="message"><i class="bi bi-chat-dots me-2"></i>Message</label>
+        <textarea name="message" id="message" class="form-control" rows="4" placeholder="Enter Message" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-success w-100 fw-bold py-2">Submit</button>
+    </form>
+
+    <h5 class="mb-3 text-secondary">Previous Submissions</h5>
+    <ul class="list-group mb-3" id="submission-list"></ul>
+
+    <a href="/weather" class="btn btn-info w-100 fw-bold py-2"><i class="bi bi-cloud-sun me-2"></i>Check Weather</a>
+  </div>
+</div>
+
+<script src="/fetchSubmissions.js"></script>
