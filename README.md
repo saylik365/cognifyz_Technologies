@@ -154,5 +154,5 @@ This project demonstrates the journey from **basic form handling** → **REST AP
 
 **Sayli Santosh Kulkarni**
 
-* 🌐 [LinkedIn]([https://www.linkedin.com/in/sayli-kulkarni-b73267331/])
+* 🌐 [LinkedIn](([https://www.linkedin.com/in/sayli-kulkarni-b73267331/]))
 * 💻 MERN Stack | JavaScript | Full-Stack Development
